@@ -1,0 +1,536 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+/* @plugin "daisyui"; */
+
+
+/* dark: */
+/* background */
+
+/* bg-main => black;
+bg-surface => #1a1a1a;
+bg-surface-secondary => #1E1E1E
+bg-red-main => red_700;
+bg-blue-main => blue_600;
+
+
+bg-secondary => zinc_800
+bg-blur-button => zinc_700
+bg-tertiary => zinc_900 || #18181b;
+bg-quaternary =>  */
+
+/* Theme colors */
+:root {
+  --main: 0 0 0;
+  --surface: 26 26 26;
+  --surface_secondary: 30 30 30;
+  --secondary: 39 39 42;
+  --tertiary: 24 24 27;
+  --blur_button: 63 63 70;
+  --red_main: 211 47 47;
+  --blue_main: 37 99 235;
+
+  --text_header: 255, 255, 255;
+  --text_header_secondary: 113, 113, 122; 
+  --text_option_header: 212, 212, 216;
+  --text_option_child: 161, 161, 170;
+  --text_diff_lvl_1: 36, 235, 168;
+  --text_diff_lvl_2: 251, 191, 36; 
+  --text_diff_lvl_3: 251, 113, 133; 
+  --text_gp_score: 0, 228, 255; 
+
+
+  --main_background: black;
+  --surface-background: #1a1a1a;
+  
+  /*________________________________________________________________*/
+  /* Color Palette */
+
+  /*____________________________________*/
+  /* Zinc Colors */
+  --zinc_900: #18181b;
+  --zinc_800: #27272a;
+  --zinc_800_rgb: rgb(39 39 42 / 50%);
+  --zinc_700: #3f3f46;
+  --zinc_600: #52525b;
+  --zinc_500: #71717a;
+  --zinc_400: #a1a1aa;
+  --zinc_300: #d4d4d8;
+  --zinc_200: #e4e4e7;
+
+  /*____________________________________*/
+  /* Tailwind Colors */
+  
+  --green: #22c55e;
+  --green_600: #16a34a;
+  --green_300: #86efac;
+  --green_700: #15803d;
+  --blue_600: #2563eb;
+  --white: #ffffff;
+  --red: #ef4444;
+  --red_600: #dc2626;
+  --red_700: #b91c1c;
+  --red_400: #f87171;
+  --red_900: #7f1d1d;
+  --blue_400: #60a5fa;
+  --blue_300: #93c5fd;
+  --blue_400: #60a5fa;
+  --blue_900: #1e40af;
+  --blue_600: #2563eb;
+  --blue_700: #1d4ed8;
+  --emerald_400: #34d399;
+  
+  
+
+
+
+  /*________________________________________________________________*/
+  /* Filter Bar */
+
+  /*____________________________________*/
+  /* Backgrounds */
+  --filter-reset-background: var(--zinc_800);
+  --filter-option-bar-background: var(--zinc_900);
+  --filter-unselected-option-background: transparent;
+  --filter-selected-option-background: var(--zinc_800);
+  --filter-option-bar-selected-background: var(--zinc_800);
+
+
+  /* Hover Backgrounds */
+  --filter-reset-background-hover: red;
+  --filter-unselected-option-hover-background: var(--zinc_800_rgb);
+
+
+  /*____________________________________*/
+  /* Borders */
+  --filter-option-bar-border-color: var(--zinc_800);
+  --filter-option-bar-selected-border-color: var(--zinc_600);
+
+  /* Border Hovers */
+
+  
+  /*____________________________________*/
+  /* Text Colors */
+  --filter-reset-text: var(--white);
+  --filter-header-text-color: var(--zinc_500);
+  --filter-selected-option-text: var(--white);
+  --filter-option-bar-text-color: var(--zinc_300);
+  --filter-unselected-option-text: var(--zinc_400);
+  --filter-option-bar-selected-text-color: var(--white);
+  --filter-option-tick_mark-color: var(--green);
+  --filter-main-header-text-color: var(--zinc_200);
+  
+  /* Hover Text Colors */
+
+
+  /*________________________________________________________________*/
+  /* Settings Menu */
+  --settings-menu-border-color: var(--zinc_800);
+  --settings-menu-background: #0f0f0f;
+  --settings-menu-header-text-color: var(--zinc_500);
+  --settings-menu-text-color-active: var(--white);
+  --settings-menu-text-color-inactive: var(--zinc_400);
+  --settings-menu-box-shadow-active: 0px 0px 5px 1px rgba(255, 255, 255, 0.2);
+  --settings-menu-box-shadow-inactive: none;
+  --settings-menu-icon-color-active: var(--white);
+  --settings-menu-icon-color-inactive: var(--zinc_400);
+  --settings-menu-badge-background: var(--red);
+  --settings-menu-badge-text-color: var(--white);
+
+  /* Settings Profile */
+  --user-settings-profile-header-text-color: var(--white);
+  --user-settings-profile-trash-icon-color: var(--zinc_500);
+  --user-settings-profile-trash-icon-color-hover: var(--red);
+
+  /* Avatar  */
+  --user-settings-profile-avatar-default-background: var(--blue_600);
+  --user-settings-profile-avatar-text-color: var(--white);
+
+  /* UserData */
+  --user-settings-profile-userdata-header-text-color: var(--zinc_500);
+  --user-settings-profile-userdata-text-color: var(--zinc_300);
+  --user-settings-profile-userdata-border-color: var(--zinc_800);
+
+  
+
+
+
+  /* Connected Devices */
+
+
+  /*________________________________________________________________*/
+  /* Settings Menu */
+  
+
+
+
+  --max_width: 2048px;
+  
+
+  /*________________________________________________________________*/
+  /* Root cards*/ 
+  --root-cards-background: var(--zinc_900);
+  --root-cards-border: var(--zinc_800);
+  --root-cards-icon-placeholder: var(--zinc_600);
+  --root-cards-text-header: var(--white);
+  --root-cards-exercise-duration-color: var(--zinc_500); 
+  --root-cards-exercise-status-color: #24eba8; /* Close to Tailwind's emerald 400 and 500 color, but slightly brighter */
+  
+
+  /*________________________________________________________________*/
+  /*Exercise page */
+  --exercise-not-found-text: var(--zinc_400);
+  --exercise-header-background: var(--zinc_900);
+  --exercise-header-border: var(--zinc_800);
+  --exercise-header-language-select-button-background: var(--zinc_800);
+  --exercise-header-language-select-button-border: var(--zinc_700);
+  --exercise-header-language-select-button-text: var(--white);
+  --exercise-header-language-select-button-focus-options-background: var(--blue_600);
+  --exercise-header-reset-button-border: var(--red_900);
+  --exercise-header-reset-button-border-hover: var(--red_400);
+  --exercise-header-reset-button-text: var(--red_900);
+  --exercise-header-reset-button-text-hover: var(--red_400);
+
+
+
+
+
+
+
+
+  
+  
+
+  
+}
+
+html[data-theme="dark"] {
+  --main: 0 0 0 !important;
+  --surface: 26 26 26 !important;
+  --surface_secondary: 30 30 30 !important;
+  --secondary: 39 39 42 !important;
+  --tertiary: 24 24 27 !important;
+  --blur_button: 63 63 70 !important;
+  --red_main: 211 47 47 !important;
+  --blue_main: 37 99 235 !important;
+  --zinc_900: #18181b !important;
+  --zinc_800: #27272a !important;
+
+
+  /* Text */
+  --text_header: 255, 255, 255 !important; /* red */
+  --text_header_secondary: 113, 113, 122 !important; /* zinc_500 */
+  --text_option_header: 212, 212, 216 !important; /* zinc_300 */
+  --text_option_child: 161, 161, 170 !important; /* zinc_400 */
+  --text_diff_lvl_1: 36, 235, 168 !important; /* emerald_400 or emerald_500*/ 
+  --text_diff_lvl_2: 251, 191, 36 !important; /* amber_400 */
+  --text_diff_lvl_3: 251, 113, 133  !important; /* rose_400 */
+  --text_gp_score: 0, 228, 255 !important; /* #00E4FF custom */
+}
+
+html[data-theme="light"] {
+  --main: 255 255 255 !important;           /* white instead of black */
+  --surface: 245 245 245 !important;        /* light gray */
+  --surface_secondary: 240 240 240 !important;
+  --secondary: 230 230 230 !important;
+  --tertiary: 225 225 225 !important;
+  --blur_button: 200 200 200 !important;
+  --red_main: 211 47 47 !important;
+  --blue_main: 37 99 235 !important;
+  --zinc_900: #f4f4f5 !important;       /* inverted from dark (zinc-100) */
+  --zinc_800: #e4e4e7 !important;       /* inverted from dark (zinc-200) */
+
+  /* Text */
+  --text_header: 17, 24, 39 !important; /* slate-900 */
+  --text_header_secondary: 75, 85, 99 !important; /* slate-600 */
+  --text_option_header: 55, 65, 81 !important; /* slate-700 */
+  --text_option_child: 107, 114, 128 !important; /* slate-500 */
+  --text_diff_lvl_1: 5, 150, 105 !important; /* emerald-600 */
+  --text_diff_lvl_2: 217, 119, 6 !important; /* amber-600 */
+  --text_diff_lvl_3: 225, 29, 72 !important; /* rose-600 */
+  --text_gp_score: 0, 132, 255 !important; /* brighter blue for light bg */
+
+
+  
+
+
+  
+}
+
+/* Issue with root variables not being applied to components, so using Tailwind layers to define custom classes for borders */
+@layer components {
+  .surface-border {
+    border: 1px solid #3f3f46;
+  }
+  .surface-border-right {
+    border-right: 1px solid #3f3f46; 
+  }
+  .filter-reset {
+    background-color: var(--filter-reset-background);
+    color: var(--filter-reset-text);
+  }
+  .filter-reset:hover {
+    background-color: var(--filter-reset-background-hover);
+  }
+
+  .filter-option-bar {
+    background-color: var(--zinc_800_rgb);
+    color: var(--zinc_400);
+  }
+  .filter-option-bar:hover {
+    background-color: var(--zinc_800);
+    color: var(--zinc_200);
+  }
+  .filter-option-bar-selected {
+    background-color: var(--zinc_800);
+    color: var(--white);
+  }
+  .user-settings-profile-userdata-label {
+    background-color: var(--surface-background);
+    border-color: var(--zinc_800);
+  }
+  .user-settings-profile-userdata-label:hover {
+    border-color: var(--zinc_600);
+  }
+
+  .user-settings-profile-trash-icon {
+    color: var(--zinc_500);
+  }
+  .user-settings-profile-trash-icon:hover {
+    color: var(--red);
+  }
+
+  .root-cards-icon {
+    background-color: var(--zinc_700);
+  }
+
+  .exercise-go-back-button {
+    color: var(--blue_400);
+  }
+  .exercise-go-back-button:hover {
+    color: var(--blue_300);
+  }
+
+  .exercise-top-header {
+    background-color: var(--exercise-header-background);
+    border-bottom: 1px solid var(--exercise-header-border);
+  }
+
+  .exercise-sidebar-open-button {
+    color: var(--zinc_400);
+  }
+  .exercise-sidebar-open-button:hover {
+    background-color: var(--zinc_800);
+  }
+
+  .exercise-header-language-select-button {
+    background-color: var(--exercise-header-language-select-button-background);
+    border: 1px solid var(--exercise-header-language-select-button-border);
+    color: var(--exercise-header-language-select-button-text);
+  }
+  .exercise-header-language-select-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--exercise-header-language-select-button-focus-options-background);
+  }
+
+  .exercise-header-reset-button {
+    border: 1px solid var(--exercise-header-reset-button-border);
+    color: var(--exercise-header-reset-button-text);
+  }
+
+  .exercise-header-reset-button:hover {
+    border: 1px solid var(--exercise-header-reset-button-border-hover);
+    color: var(--exercise-header-reset-button-text-hover);
+  }
+
+  .exercise-header-save-button {
+    border: 1px solid var(--blue_900);
+    color: var(--blue_900);
+  }
+
+  .exercise-header-save-button:hover {
+    border: 1px solid var(--blue_400);
+    color: var(--blue_400);
+  }
+
+  .exercise-header-complete-exercise-button-text {
+    color: var(--green_600);
+  }
+
+  .exercise-header-complete-exercise-button-text:hover {
+    color: var(--green_300);
+  }
+
+  .exercise-header-complete-exercise-button-border {
+    border: 1px solid var(--green_600);
+    cursor: pointer;
+  }
+
+  .exercise-header-complete-exercise-button-border:hover {
+    border: 1px solid var(--green_300);
+  }
+
+  .exercise-header-complete-exercise-button-disabled {
+    background-color: var(--zinc_700);
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+
+  .exercise-header-exit-exercise-button {
+    color: var(--zinc_400)
+  }
+
+  .exercise-header-exit-exercise-button:hover {
+    background-color: var(--zinc_800);
+  }
+
+  .exercise-terminal-show-test-panel-button {
+    background-color: var(--zinc_800);
+    color: var(--zinc_400);
+    border: var(--zinc_700);
+  }
+
+  .exercise-terminal-show-test-panel-button:hover {
+    background-color: var(--zinc_900);
+    color: var(--zinc_200);
+  }
+
+  .exercise-terminal-resize-handle-active {
+    background-color: var(--blue_600);
+  }
+
+  .exercise-terminal-resize-handle {
+    background-color: var(--zinc_700);
+  }
+
+  .exercise-terminal-resize-handle:hover {
+    background-color: var(--blue_600);
+  }
+
+  .exercise-terminal-test-panel {
+    background-color: rgb(var(--surface_secondary));
+    border: 1px solid var(--zinc_800);
+  }
+
+  .exercise-terminal-panel-header {
+    background-color: rgb(var(--surface));
+    border-bottom: 1px solid var(--zinc_700);
+    color: var(--white);
+  }
+
+  .exercise-terminal-test-case-passed {
+    background-color: var(--green_700);
+  }
+
+  .exercise-terminal-test-case-passed-active {
+    background-color: var(--green_600);
+  }
+
+  .exercise-terminal-test-case-failed-active {
+    background-color: rgb(var(--red_main));
+  }
+
+  .exercise-terminal-test-case-failed {
+    background-color: rgb(var(--red_main));
+  }
+
+  .exercise-terminal-test-case-default {
+    background-color: var(--zinc_700);
+  }
+
+  .exercise-terminal-test-case-default:hover {
+    background-color: var(--zinc_600);
+  }
+
+  .exercise-terminal-run-tests-button {
+    background-color: rgb(var(--blue_main));
+    color: var(--white);
+  }
+
+  .exercise-terminal-run-tests-button:hover {
+    background-color: var(--blue_700);
+  }
+
+  .exercise-terminal-run-test-spinner {
+    border: 2px solid var(--white);
+    border-top: 2px solid transparent;
+  }
+
+  .exercise-terminal-scenario-description {
+    color: var(--zinc_400);
+  }
+
+  .exercise-terminal-code-run-header {
+    color: var(--zinc_400);
+  }
+
+  .exercise-terminal-code-run {
+    background-color: rgb(var(--main));
+    border: 1px solid var(--zinc_700);
+    color: var(--zinc_300);
+  }
+
+  .exercise-terminal-expected-output-header {
+    color: var(--zinc_300);
+  }
+
+  .exercise-terminal-expected-output {
+    background-color: rgb(var(--main));
+    border: 1px solid var(--zinc_700);
+    color: var(--zinc_300)
+  }
+
+  .exercise-terminal-output-header {
+    color: var(--zinc_300);
+  }
+
+  .exercise-terminal-output {
+    background-color: rgb(var(--main));
+    border: 1px solid var(--zinc_700);
+    color: var(--zinc_300)
+  }
+
+
+  
+
+  .exercise-terminal-output-match {
+    color: var(--green_500);
+  }
+
+  .exercise-terminal-output-mismatch {
+    color: var(--red_500);
+  }
+
+  /* .exercise-term */
+
+
+
+}
+
+
+
+/* Override autofill background and text colors */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(55 65 81) inset !important;
+  -webkit-text-fill-color: rgb(255 255 255) !important;
+}
+
+/* Override autofill border color */
+input:-webkit-autofill {
+  border-color: rgb(75 85 99) !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
