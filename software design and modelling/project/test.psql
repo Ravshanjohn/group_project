@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION admin_get_maps()
+RETURNS TABLE (
+  id BIGINT,
+  name TEXT,
+  exercises_id BIGINT[],
+  created_at TIMESTAMPTZ,
+)
+LANGUAGE sql
+STABLE
+AS $$
+  SELECT 
+    id,
+    name,
+    exercises_id,
+    created_at
+  FROM maps;
